@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cartão de Crédito</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #495057;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: #80bdff;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+        }
+
+        .submit-btn {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+        .submit-btn:active {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Finalizar Compra</h1>
+        <form class="checkout-form">
+            <section class="card-info">
+                <h2>Informações do Cartão</h2>
+                <label for="card-name">Nome no Cartão</label>
+                <input type="text" id="card-name" name="card-name" placeholder="Nome como no cartão" required>
+
+                <label for="card-number">Número do Cartão</label>
+                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+
+                <label for="card-expiry">Data de Validade</label>
+                <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA" required>
+
+                <label for="card-cvc">Código de Segurança</label>
+                <input type="text" id="card-cvc" name="card-cvc" placeholder="123" required>
+            </section>
+
+            <section class="shipping-info">
+                <h2>Endereço de Envio</h2>
+                <label for="address">Rua</label>
+                <input type="text" id="address" name="address" placeholder="Rua Exemplo, 123" required>
+
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city" placeholder="Cidade" required>
+
+                <label for="state">Estado</label>
+                <input type="text" id="state" name="state" placeholder="Estado" required>
+
+                <label for="zip">CEP</label>
+                <input type="text" id="zip" name="zip" placeholder="00000-000" required>
+            </section>
+
+            <button type="submit" class="submit-btn">Finalizar Compra</button>
+        </form>
+    </div>
+</body>
+</html>
